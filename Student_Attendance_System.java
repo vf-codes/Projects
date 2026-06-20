@@ -70,7 +70,7 @@ class Student {
                 presentCount++;
             }
         }
-        return (presentCount/totalDays)*100;
+        return (int)((double)(presentCount/totalDays)*100);
     }
     
     @Override
@@ -299,7 +299,7 @@ class AttendanceManager{
     
     public int getAttendancePercentageOfADate(LocalDate date){
         List<Student> presentStudents = getAttendanceOnDate(date);
-        return (presentStudents.size()/students.size())* 100;
+        return (int)((double)(presentStudents.size()/students.size())* 100);
     }
     
 }
@@ -940,6 +940,7 @@ class UserInterface{
     
     private void filterStudentsByClass(){
         System.out.print("Enter Name Of Class : ");
+        sc.nextLine();
         String className = sc.nextLine().toLowerCase();
         List<Student> students = attendanceManager.getClassStudents(className);
         if (students.isEmpty()){
