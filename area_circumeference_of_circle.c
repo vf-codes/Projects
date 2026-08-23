@@ -5,6 +5,6 @@ int main() {
     area = 3.14*r*r;
     circumference = 2 * 3.14*r;
     printf("area is %f\n", area);
-    printf("circumference is %f\n", circumference);
+    printf("circumference is %f\n", circumference); 
     return 0;
 }
